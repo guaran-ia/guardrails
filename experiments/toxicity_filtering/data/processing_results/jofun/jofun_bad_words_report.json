@@ -1,0 +1,41 @@
+{
+  "corpus_name": "jofun",
+  "total_documents": 1842,
+  "documents_with_bad_words": 251,
+  "percentage_documents_with_bad_words": 0.13626492942453855,
+  "total_bad_words": 304,
+  "bad_word_counts": {
+    "tavy": 181,
+    "tembo": 64,
+    "japiro": 10,
+    "añamemby": 11,
+    "akã trapo": 2,
+    "nderevi": 3,
+    "tavyrai": 8,
+    "mondaha": 4,
+    "tembone": 1,
+    "nde akã tembo": 2,
+    "jurutavy": 1,
+    "ejapiro": 6,
+    "juru palangana": 2,
+    "kuña’i": 1,
+    "tavyrón": 1,
+    "voli kuña": 1,
+    "nde revikua": 1,
+    "che rembo": 3,
+    "tevine": 1,
+    "pokarẽ": 1
+  },
+  "sources_counts": {
+    "unknown": 251
+  },
+  "bad_words_by_source": {
+    "unknown": 304
+  },
+  "url_counts": {
+    "unknown": 251
+  },
+  "bad_words_by_url": {
+    "unknown": 304
+  }
+}

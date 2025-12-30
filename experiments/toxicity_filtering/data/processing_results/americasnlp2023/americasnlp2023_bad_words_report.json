@@ -1,0 +1,31 @@
+{
+  "corpus_name": "americasnlp2023",
+  "total_documents": 27027,
+  "documents_with_bad_words": 85,
+  "percentage_documents_with_bad_words": 0.003145003145003145,
+  "total_bad_words": 87,
+  "bad_word_counts": {
+    "tavy": 49,
+    "mondaha": 17,
+    "pilili": 2,
+    "nderasóre": 2,
+    "kuña’i": 2,
+    "vaícha": 4,
+    "jaguakuña": 4,
+    "výro": 2,
+    "kelembu": 4,
+    "añamemby": 1
+  },
+  "sources_counts": {
+    "unknown": 85
+  },
+  "bad_words_by_source": {
+    "unknown": 87
+  },
+  "url_counts": {
+    "unknown": 85
+  },
+  "bad_words_by_url": {
+    "unknown": 87
+  }
+}

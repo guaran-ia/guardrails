@@ -1,0 +1,63 @@
+{
+  "corpus_name": "opus-all-en",
+  "total_documents": 417480,
+  "documents_with_bad_words": 1945,
+  "percentage_documents_with_bad_words": 0.004658905815847466,
+  "total_bad_words": 2133,
+  "bad_word_counts": {
+    "tavy": 1432,
+    "che rembo": 6,
+    "japiro": 13,
+    "ejapiro": 7,
+    "ejapiro túnare": 2,
+    "mondaha": 181,
+    "výro": 128,
+    "tembo": 52,
+    "che revi": 12,
+    "mbóre": 10,
+    "añarako": 13,
+    "popinda": 11,
+    "pokarẽ": 42,
+    "pituva": 37,
+    "pychãi": 18,
+    "tavyrón": 3,
+    "tavyrai": 45,
+    "añamemby": 24,
+    "akã pekõi": 2,
+    "mykurẽ": 22,
+    "pilili": 2,
+    "lápi mbyky": 3,
+    "vaícha": 11,
+    "pire pererĩ": 12,
+    "eike nderevikuápe": 1,
+    "nderevi": 4,
+    "añarakópeguare": 4,
+    "nde revikua": 8,
+    "tilinga": 1,
+    "chalái": 7,
+    "añarapypikuarapeguare": 1,
+    "kelembu": 6,
+    "akãne": 3,
+    "jaguakuña": 3,
+    "jurutavy": 3,
+    "molde vai": 2,
+    "anguja tupao": 1,
+    "tóro rembo": 1
+  },
+  "sources_counts": {
+    "Tatoeba_v2023-04-12": 24,
+    "NLLB_v1": 1920,
+    "wikimedia_v20230407": 1
+  },
+  "bad_words_by_source": {
+    "Tatoeba_v2023-04-12": 27,
+    "NLLB_v1": 2105,
+    "wikimedia_v20230407": 1
+  },
+  "url_counts": {
+    "unknown": 1945
+  },
+  "bad_words_by_url": {
+    "unknown": 2133
+  }
+}

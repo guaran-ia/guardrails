@@ -1,0 +1,24 @@
+{
+  "corpus_name": "americasnli",
+  "total_documents": 1990,
+  "documents_with_bad_words": 15,
+  "percentage_documents_with_bad_words": 0.007537688442211055,
+  "total_bad_words": 16,
+  "bad_word_counts": {
+    "tavy": 7,
+    "mondaha": 8,
+    "tavyrai": 1
+  },
+  "sources_counts": {
+    "unknown": 15
+  },
+  "bad_words_by_source": {
+    "unknown": 16
+  },
+  "url_counts": {
+    "unknown": 15
+  },
+  "bad_words_by_url": {
+    "unknown": 16
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "corpus_name": "josa",
+  "total_documents": 3491,
+  "documents_with_bad_words": 132,
+  "percentage_documents_with_bad_words": 0.03781151532512174,
+  "total_bad_words": 160,
+  "bad_word_counts": {
+    "japiro": 7,
+    "tavy": 91,
+    "tavyrai": 5,
+    "tembo": 13,
+    "añarako": 7,
+    "vaka cháko": 1,
+    "nderasóre": 5,
+    "takuchi": 6,
+    "añamemby": 5,
+    "mondaha": 2,
+    "mykurẽ": 1,
+    "vaícha": 1,
+    "añarakópeguare": 1,
+    "ejapiro": 4,
+    "ejapiro túnare": 2,
+    "che rembo": 1,
+    "chalái": 1,
+    "eike nde revikuápe": 1,
+    "pokarẽ": 1,
+    "teviro": 1,
+    "añaraitypeguare": 1,
+    "nde revikua": 1,
+    "tilinga": 1,
+    "molde vai": 1
+  },
+  "sources_counts": {
+    "unknown": 132
+  },
+  "bad_words_by_source": {
+    "unknown": 160
+  },
+  "url_counts": {
+    "unknown": 132
+  },
+  "bad_words_by_url": {
+    "unknown": 160
+  }
+}

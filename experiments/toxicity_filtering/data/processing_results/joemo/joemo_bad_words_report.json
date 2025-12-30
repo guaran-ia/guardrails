@@ -1,0 +1,41 @@
+{
+  "corpus_name": "joemo",
+  "total_documents": 1571,
+  "documents_with_bad_words": 245,
+  "percentage_documents_with_bad_words": 0.15595162316995545,
+  "total_bad_words": 292,
+  "bad_word_counts": {
+    "ejapiro": 6,
+    "tembo": 61,
+    "japiro": 11,
+    "tavy": 166,
+    "akã trapo": 3,
+    "juru palangana": 3,
+    "tavyrai": 4,
+    "nderevi": 4,
+    "tembone": 1,
+    "añamemby": 14,
+    "che rembo": 4,
+    "nde revikua": 1,
+    "mondaha": 5,
+    "tavyrón": 1,
+    "pysã tronco": 1,
+    "nde akã tembo": 2,
+    "takuchi": 2,
+    "tatune": 1,
+    "voli kuña": 1,
+    "jurutavy": 1
+  },
+  "sources_counts": {
+    "unknown": 245
+  },
+  "bad_words_by_source": {
+    "unknown": 292
+  },
+  "url_counts": {
+    "unknown": 245
+  },
+  "bad_words_by_url": {
+    "unknown": 292
+  }
+}

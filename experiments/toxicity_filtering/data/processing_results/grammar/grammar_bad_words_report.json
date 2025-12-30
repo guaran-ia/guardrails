@@ -1,0 +1,36 @@
+{
+  "corpus_name": "grammar",
+  "total_documents": 277842,
+  "documents_with_bad_words": 2887,
+  "percentage_documents_with_bad_words": 0.010390797647583879,
+  "total_bad_words": 3004,
+  "bad_word_counts": {
+    "tavy": 1729,
+    "tembo": 69,
+    "výro": 456,
+    "pituva": 173,
+    "pokarẽ": 208,
+    "takuchi": 38,
+    "mykurẽ": 49,
+    "teviro": 44,
+    "japiro": 7,
+    "añamemby": 10,
+    "mbóre": 53,
+    "popinda": 39,
+    "tavyrai": 100,
+    "chalái": 20,
+    "kelembu": 9
+  },
+  "sources_counts": {
+    "unknown": 2887
+  },
+  "bad_words_by_source": {
+    "unknown": 3004
+  },
+  "url_counts": {
+    "unknown": 2887
+  },
+  "bad_words_by_url": {
+    "unknown": 3004
+  }
+}

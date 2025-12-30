@@ -1,0 +1,12 @@
+{
+  "corpus_name": "culturax",
+  "total_documents": 63,
+  "documents_with_bad_words": 0,
+  "percentage_documents_with_bad_words": 0.0,
+  "total_bad_words": 0,
+  "bad_word_counts": {},
+  "sources_counts": {},
+  "bad_words_by_source": {},
+  "url_counts": {},
+  "bad_words_by_url": {}
+}
