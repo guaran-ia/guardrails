@@ -1,0 +1,19 @@
+{
+  "corpus_name": "opus",
+  "total_documents": 267,
+  "total_documents_by_source": {
+    "unknown": 267
+  },
+  "total_documents_by_domain": {
+    "unknown": 267
+  },
+  "affected_documents": 0,
+  "ratio_affected_documents": 0.0,
+  "affected_documents_by_source": {},
+  "affected_documents_by_domain": {},
+  "toxic_terms": 0,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {},
+  "toxic_terms_by_domain": {},
+  "toxic_term_counts": {}
+}

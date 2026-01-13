@@ -1,0 +1,29 @@
+{
+  "corpus_name": "belele",
+  "total_documents": 1800,
+  "total_documents_by_source": {
+    "unknown": 1800
+  },
+  "total_documents_by_domain": {
+    "unknown": 1800
+  },
+  "affected_documents": 2,
+  "ratio_affected_documents": 0.0011111111111111111,
+  "affected_documents_by_source": {
+    "unknown": 2
+  },
+  "affected_documents_by_domain": {
+    "unknown": 2
+  },
+  "toxic_terms": 2,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 2
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 2
+  },
+  "toxic_term_counts": {
+    "tavy": 2
+  }
+}

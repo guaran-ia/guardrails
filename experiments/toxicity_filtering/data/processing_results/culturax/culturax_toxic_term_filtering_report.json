@@ -1,0 +1,23 @@
+{
+  "corpus_name": "culturax",
+  "total_documents": 63,
+  "total_documents_by_source": {
+    "OSCAR-2301": 2,
+    "OSCAR-2201": 5,
+    "OSCAR-2109": 56
+  },
+  "total_documents_by_domain": {
+    "gn.m.wikipedia.org": 17,
+    "gn.wikipedia.org": 45,
+    "wd-gn.wikideck.com": 1
+  },
+  "affected_documents": 0,
+  "ratio_affected_documents": 0.0,
+  "affected_documents_by_source": {},
+  "affected_documents_by_domain": {},
+  "toxic_terms": 0,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {},
+  "toxic_terms_by_domain": {},
+  "toxic_term_counts": {}
+}

@@ -1,0 +1,55 @@
+{
+  "corpus_name": "jojajovai",
+  "total_documents": 30855,
+  "total_documents_by_source": {
+    "abc": 16492,
+    "blogs": 2444,
+    "hackaton": 513,
+    "libro_gn": 1423,
+    "libro_td": 1016,
+    "seminario": 2179,
+    "spl": 4788,
+    "anlp": 2000
+  },
+  "total_documents_by_domain": {
+    "unknown": 30855
+  },
+  "affected_documents": 32,
+  "ratio_affected_documents": 0.0010371090584994328,
+  "affected_documents_by_source": {
+    "abc": 17,
+    "blogs": 4,
+    "hackaton": 2,
+    "seminario": 2,
+    "anlp": 6,
+    "spl": 1
+  },
+  "affected_documents_by_domain": {
+    "unknown": 32
+  },
+  "toxic_terms": 32,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "abc": 17,
+    "blogs": 4,
+    "hackaton": 2,
+    "seminario": 2,
+    "anlp": 6,
+    "spl": 1
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 32
+  },
+  "toxic_term_counts": {
+    "mondaha": 12,
+    "tavy": 6,
+    "kelembu": 3,
+    "vare’a": 3,
+    "jaguakuña": 2,
+    "añamemby": 1,
+    "mbóre": 1,
+    "výro": 2,
+    "nderasóre": 1,
+    "tembo": 1
+  }
+}

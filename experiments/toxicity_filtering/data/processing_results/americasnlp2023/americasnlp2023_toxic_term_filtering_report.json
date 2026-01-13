@@ -1,0 +1,34 @@
+{
+  "corpus_name": "americasnlp2023",
+  "total_documents": 27027,
+  "total_documents_by_source": {
+    "unknown": 27027
+  },
+  "total_documents_by_domain": {
+    "unknown": 27027
+  },
+  "affected_documents": 28,
+  "ratio_affected_documents": 0.001036001036001036,
+  "affected_documents_by_source": {
+    "unknown": 28
+  },
+  "affected_documents_by_domain": {
+    "unknown": 28
+  },
+  "toxic_terms": 28,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 28
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 28
+  },
+  "toxic_term_counts": {
+    "mondaha": 11,
+    "tavy": 6,
+    "nderasóre": 2,
+    "jaguakuña": 4,
+    "kelembu": 4,
+    "añamemby": 1
+  }
+}

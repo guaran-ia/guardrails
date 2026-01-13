@@ -1,0 +1,35 @@
+{
+  "corpus_name": "commonvoice",
+  "total_documents": 6154,
+  "total_documents_by_source": {
+    "unknown": 6154
+  },
+  "total_documents_by_domain": {
+    "unknown": 6154
+  },
+  "affected_documents": 32,
+  "ratio_affected_documents": 0.005199870003249919,
+  "affected_documents_by_source": {
+    "unknown": 32
+  },
+  "affected_documents_by_domain": {
+    "unknown": 32
+  },
+  "toxic_terms": 32,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 32
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 32
+  },
+  "toxic_term_counts": {
+    "pychãi": 16,
+    "mondaha": 10,
+    "añamemby": 2,
+    "molde vai": 1,
+    "mbóre": 1,
+    "tavyrón": 1,
+    "pokarẽ": 1
+  }
+}

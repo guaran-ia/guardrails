@@ -1,0 +1,31 @@
+{
+  "corpus_name": "apollomoedataset",
+  "total_documents": 2993,
+  "total_documents_by_source": {
+    "general_gn": 993,
+    "medicalExam_gn": 2000
+  },
+  "total_documents_by_domain": {
+    "unknown": 2993
+  },
+  "affected_documents": 12,
+  "ratio_affected_documents": 0.004009355162044771,
+  "affected_documents_by_source": {
+    "general_gn": 12
+  },
+  "affected_documents_by_domain": {
+    "unknown": 12
+  },
+  "toxic_terms": 33,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "general_gn": 33
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 33
+  },
+  "toxic_term_counts": {
+    "tavy": 22,
+    "mondaha": 11
+  }
+}

@@ -1,6 +1,9 @@
 import json
 from collections import Counter
 import os
+import re
+from urllib.parse import urlparse
+from statistics import mean
 
 def read_jsonl(file_path: str):
     """Reads a JSONL (JSON Lines) file, yielding one JSON object per line."""
@@ -49,16 +52,116 @@ def write_json(data, file_path: str, indent: int = 2):
         json.dump(data, f, indent=indent, ensure_ascii=False)
 
 def word_counts(text: str, words: list):
-    """Counts the occurrences of each element of a list of words inside a given text."""
     text_lower = text.lower()
     counts = Counter()
-    for entry in words:
-        count = text_lower.count(entry.lower())
-        if count:
-            counts[entry.lower()] = count
-    return dict(counts) if counts else []
+
+    for phrase in words:
+        phrase_lower = phrase.lower()
+        # Match whole words, even for multi-word phrases
+        pattern = rf"\b{re.escape(phrase_lower)}\b"
+        matches = re.findall(pattern, text_lower)
+        if matches:
+            counts[phrase] = len(matches)
+
+    return dict(counts)
 
 def load_bad_words(file_path:str):
     """Load the bad words from a text file (one per line)."""
     with open(file_path, "r", encoding="utf-8") as f:
         return [line.strip() for line in f.readlines()]
+
+def make_markdown_table(
+    rows: list[dict],
+    *,
+    #columns: list[str],
+    rename: dict[str, str] | None = None,
+    order_by: str | None = None,
+    descending: bool = True,
+    highlights: dict[str, str] | None = None,   # "max" | "min"
+    totals: dict[str, str] | None = None,       # "sum" | "mean"
+    formatters: dict[str, callable] | None = None,
+    align: dict[str, str] | None = None,        # left | right | center
+) -> str:
+
+    rename = rename or {}
+    highlights = highlights or {}
+    totals = totals or {}
+    formatters = formatters or {}
+    align = align or {}
+
+    processed = []
+
+    #Rename the columns
+    for row in rows:
+        new_row = {}
+        for k, v in row.items():
+            new_row[rename.get(k, k)] = v
+        processed.append(new_row)
+
+    columns = list(processed[0].keys())
+
+    if isinstance(align, str):
+        align = {col: align for col in columns}
+
+    if order_by:
+        processed.sort(key=lambda r: r[order_by], reverse=descending)
+
+    highlight_values = {}
+    for col, mode in highlights.items():
+        values = [r[col] for r in processed]
+        highlight_values[col] = max(values) if mode == "max" else min(values)
+
+    md = []
+    md.append("| " + " | ".join(columns) + " |")
+
+    def align_marker(col):
+        a = align.get(col, "centre")
+        return {
+            "left": ":---",
+            "right": "---:",
+            "center": ":---:",
+        }[a]
+
+    md.append("| " + " | ".join(align_marker(c) for c in columns) + " |")
+
+    for row in processed:
+        cells = []
+        for col in columns:
+            val = row[col]
+
+            if col in formatters:
+                val = formatters[col](val)
+            else:
+                val = str(val)
+
+            if col in highlight_values and row[col] == highlight_values[col]:
+                val = f"**{val}**"
+
+            cells.append(val)
+
+        md.append("| " + " | ".join(cells) + " |")
+
+    if totals:
+        total_cells = []
+        for col in columns:
+            if col in totals:
+                rule = totals[col]
+
+                if callable(rule):
+                    val = rule(processed)
+
+                else:
+                    values = [r[col] for r in processed]
+                    if rule == "sum":
+                        val = sum(values)
+                    elif rule == "mean":
+                        val = mean(values)
+                    else:
+                        val = ""
+                val = formatters[col](val) if col in formatters else str(val)
+                total_cells.append(f"**{val}**")
+            else:
+                total_cells.append("")
+        md.append("| " + " | ".join(total_cells) + " |")
+    
+    return "\n".join(md)

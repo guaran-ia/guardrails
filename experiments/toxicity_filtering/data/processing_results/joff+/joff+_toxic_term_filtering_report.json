@@ -1,0 +1,44 @@
+{
+  "corpus_name": "joff+",
+  "total_documents": 2170,
+  "total_documents_by_source": {
+    "unknown": 2170
+  },
+  "total_documents_by_domain": {
+    "unknown": 2170
+  },
+  "affected_documents": 143,
+  "ratio_affected_documents": 0.06589861751152074,
+  "affected_documents_by_source": {
+    "unknown": 143
+  },
+  "affected_documents_by_domain": {
+    "unknown": 143
+  },
+  "toxic_terms": 157,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 157
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 157
+  },
+  "toxic_term_counts": {
+    "tavy": 64,
+    "tembo": 50,
+    "nderevi": 2,
+    "japiro": 4,
+    "mondaha": 4,
+    "juru palangana": 3,
+    "añamemby": 12,
+    "akã trapo": 3,
+    "ejapiro": 5,
+    "jurutavy": 1,
+    "pokarẽ": 1,
+    "nde akã tembo": 2,
+    "tavyrón": 1,
+    "pysã tronco": 1,
+    "voli kuña": 1,
+    "che rembo": 3
+  }
+}

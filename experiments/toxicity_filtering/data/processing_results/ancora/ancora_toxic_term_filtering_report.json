@@ -1,0 +1,37 @@
+{
+  "corpus_name": "ancora",
+  "total_documents": 14120,
+  "total_documents_by_source": {
+    "unknown": 14120
+  },
+  "total_documents_by_domain": {
+    "unknown": 14120
+  },
+  "affected_documents": 57,
+  "ratio_affected_documents": 0.004036827195467422,
+  "affected_documents_by_source": {
+    "unknown": 57
+  },
+  "affected_documents_by_domain": {
+    "unknown": 57
+  },
+  "toxic_terms": 59,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 59
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 59
+  },
+  "toxic_term_counts": {
+    "pokarẽ": 20,
+    "kelembu": 2,
+    "tavyrai": 3,
+    "tavy": 12,
+    "teviro": 1,
+    "pituva": 9,
+    "mbóre": 8,
+    "výro": 3,
+    "tembo": 1
+  }
+}

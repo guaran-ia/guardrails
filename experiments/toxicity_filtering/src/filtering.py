@@ -1,159 +1,156 @@
-from utils import read_jsonl, word_counts, read_json, write_json
+from utils import read_jsonl, word_counts, write_json, make_markdown_table
 import os
 from copy import copy
 from collections import Counter
 import json
+from urllib.parse import urlparse
 
 
-DATA_DIRECTORY = 'data'
-BAD_WORDS_FILENAME = 'bad_words.txt'
-EXISTING_CORPORA_DATA = 'existing_corpora/data/processed'
-OUTPUT_DIRECTORY = 'data/processing_results'
-
-def get_empty_bad_word_report():
-    bad_words_report = {
+def get_toxic_terms_report():
+    toxic_terms_report = {
         'corpus_name':"",
         'total_documents':0,
-        'documents_with_bad_words':0,
-        'percentage_documents_with_bad_words':0.0,
-        'total_bad_words':0,
-        'bad_word_counts':None,
-        'sources_counts':None,
-        'bad_words_by_source': None,
-        'url_counts':None,
-        'bad_words_by_url':None
+        'total_documents_by_source': None,
+        'total_documents_by_domain': None,
+        'affected_documents':0,
+        'ratio_affected_documents':0.0,
+        'affected_documents_by_source': None,
+        'affected_documents_by_domain': None,
+        'toxic_terms':0,
+        'toxic_term_counts':None,
+        'toxic_terms_by_source':None,
+        'toxic_terms_by_domain': None,
     }
-    return bad_words_report
+    return toxic_terms_report
 
-def process_file(file_path:str, bad_words:list):
-    documents = read_jsonl(file_path=file_path)
-    for document in documents:
-        bad_word_counts = word_counts(document['text'], bad_words)
-        if bad_word_counts:
-            result = copy(document)
-            result['bad_word_counts'] = bad_word_counts
-            yield result
 
-def create_report(data, output_data_dir: str, corpus_name: str, corpus_report_path: str):
-    corpus_output_dir = os.path.join(output_data_dir, corpus_name)
+def process_corpus(input_data_directory:str, corpus_name:str, output_directory, toxic_terms):
+    corpus_directory = os.path.join(input_data_directory, corpus_name)
+    
+    #Corpus file path
+    corpus_file_path = os.path.join(corpus_directory,f"{corpus_name}.jsonl")
+
+    #Output file paths
+    corpus_output_dir = os.path.join(output_directory, corpus_name)
     os.makedirs(corpus_output_dir, exist_ok=True)
-    output_jsonl_path = os.path.join(corpus_output_dir,f"{corpus_name}_bad_words.jsonl")
-    output_report_path = os.path.join(corpus_output_dir,f"{corpus_name}_bad_words_report.json")
+    output_file_path = os.path.join(corpus_output_dir,f"{corpus_name}_toxic_term_filtering.jsonl")
+    output_report_path = os.path.join(corpus_output_dir,f"{corpus_name}_toxic_term_filtering_report.json")
 
-    bad_word_counts = Counter()
-    url_counts = Counter()
-    source_counts = Counter()
-    bad_words_by_source = Counter()
-    bad_words_by_url = Counter()
+    #Counters
+    total_documents_by_source = Counter()
+    total_documents_by_domain = Counter()
+    affected_documents_by_source = Counter()
+    affected_documents_by_domain = Counter()
+    toxic_terms_by_source = Counter()
+    toxic_terms_by_domain = Counter()
+    toxic_term_counts = Counter()
 
-    bad_words_report = get_empty_bad_word_report()
-    bad_words_report["corpus_name"] = corpus_name
+    #Report dictionary
+    toxic_terms_report = get_toxic_terms_report()
+    toxic_terms_report["corpus_name"] = corpus_name
 
-    #Read corpus metadata (small → safe to load fully)
-    corpus_report = read_json(corpus_report_path)
+    #Stream corpus documents
+    documents = read_jsonl(corpus_file_path)
 
-    with open(output_jsonl_path, "w", encoding="utf-8") as out_f:
-        for document in data:
-            bad_words_report["documents_with_bad_words"] += 1
-            bad_word_counts.update(document["bad_word_counts"])
-            doc_bad_word_total = sum(document["bad_word_counts"].values())
-            source_counts[document["source"]] += 1
-            bad_words_by_source[document["source"]] += doc_bad_word_total
-            url_counts[document["url"]] += 1
-            bad_words_by_url[document["url"]] += doc_bad_word_total
-            out_f.write(json.dumps(document, ensure_ascii=False) + "\n")
+    with open(file=output_file_path, mode="w", encoding="utf-8") as output_file:
+        for document in documents:
+            source = document['source']
 
-    # Finalize report
-    bad_words_report["total_documents"] = corpus_report["num_docs"]
+            #Parse the domain
+            url = document['url']
+            if url != 'unknown':
+                domain = urlparse(url).netloc
+            else:
+                domain = url
+            
+            toxic_terms_report['total_documents'] += 1
+            total_documents_by_source[source] += 1
+            total_documents_by_domain[domain] += 1
+            toxic_term_counts_document = word_counts(document['text'], toxic_terms)
 
-    if bad_words_report["total_documents"] > 0:
-        bad_words_report["percentage_documents_with_bad_words"] = (
-            bad_words_report["documents_with_bad_words"]
-            / bad_words_report["total_documents"]
+            if toxic_term_counts_document:
+                doc = copy(document)
+                doc['toxic_term_counts'] = toxic_term_counts_document
+
+                toxic_terms_report['affected_documents'] +=1
+                affected_documents_by_source[source] += 1
+                affected_documents_by_domain[domain] += 1
+                toxic_term_counts.update(toxic_term_counts_document)
+                toxic_terms_document = sum(toxic_term_counts_document.values())
+                toxic_terms_report['toxic_terms'] += toxic_terms_document
+                toxic_terms_by_source[source] += toxic_terms_document
+                toxic_terms_by_domain[domain] += toxic_terms_document
+
+                output_file.write(json.dumps(doc, ensure_ascii=False) + "\n")
+
+    if toxic_terms_report['affected_documents'] > 0:
+        toxic_terms_report['ratio_affected_documents'] = (
+            toxic_terms_report['affected_documents']
+            / toxic_terms_report['total_documents']
         )
 
-    bad_words_report["total_bad_words"] = sum(bad_word_counts.values())
-    bad_words_report["bad_word_counts"] = dict(bad_word_counts)
-    bad_words_report["sources_counts"] = dict(source_counts)
-    bad_words_report["url_counts"] = dict(url_counts)
-    bad_words_report["bad_words_by_source"] = dict(bad_words_by_source)
-    bad_words_report["bad_words_by_url"] = dict(bad_words_by_url)
+    toxic_terms_report['total_documents_by_source'] = dict(total_documents_by_source)
+    toxic_terms_report['total_documents_by_domain'] = dict(total_documents_by_domain)
+    toxic_terms_report['affected_documents_by_source'] = dict(affected_documents_by_source)
+    toxic_terms_report['affected_documents_by_domain'] = dict(affected_documents_by_domain)
+    toxic_terms_report['toxic_terms_by_source'] = dict(toxic_terms_by_source)
+    toxic_terms_report['toxic_terms_by_domain'] = dict(toxic_terms_by_domain)
+    toxic_terms_report['toxic_term_counts'] = dict(toxic_term_counts)
 
-    write_json(bad_words_report, output_report_path)
+    write_json(toxic_terms_report, output_report_path)
 
-def process_existing_corpora(main_directory: str, bad_words: list):
-    data_path = os.path.join(main_directory,DATA_DIRECTORY,EXISTING_CORPORA_DATA)
 
-    output_data_dir = os.path.join(main_directory,OUTPUT_DIRECTORY)
-
-    for corpus_name in os.listdir(data_path):
-        corpus_dir = os.path.join(data_path, corpus_name)
-
-        if not os.path.isdir(corpus_dir):
-            continue
-
-        corpus_file_path = os.path.join(corpus_dir,f"{corpus_name}.jsonl")
-        corpus_report_path = os.path.join(corpus_dir,f"{corpus_name}_report.json")
-
-        if not os.path.isfile(corpus_file_path):
-            continue
+def process_existing_corpora(input_data_directory:str, output_directory:str, toxic_terms: list):
+    for corpus_name in os.listdir(input_data_directory):
         print(f"[INFO] Processing corpus: {corpus_name}")
-        results = process_file(corpus_file_path, bad_words)
-        create_report(data=results,output_data_dir=output_data_dir,corpus_name=corpus_name,corpus_report_path=corpus_report_path)
+        process_corpus(input_data_directory, corpus_name, output_directory, toxic_terms)
 
 
-# def process_existing_corpora(
-#     main_directory: str,
-#     bad_words: list,
-#     max_corpora: int | None = None,
-# ):
-#     data_path = os.path.join(
-#         main_directory,
-#         DATA_DIRECTORY,
-#         EXISTING_CORPORA_DATA,
-#     )
+def create_report(filtering_data_directory:str, output_directory:str, data:dict[str,]):
+    markdown_parts = []
 
-#     output_data_dir = os.path.join(
-#         main_directory,
-#         OUTPUT_DIRECTORY,
-#     )
+    #Main Title
+    main_title = "# Toxicity Filtering Experiments Report🤬📋"
+    markdown_parts.append(main_title)
 
-#     processed = 0
+    #Introduction
+    introduction_text = \
+    "This report presents and analyses the results of a keyword-based toxicity filtering experiment conducted across multiple text corpora. The goal of the experiment is to evaluate the performance of the filtering method. "
 
-#     for corpus_name in os.listdir(data_path):
-#         if max_corpora is not None and processed >= max_corpora:
-#             break
+    #Methodology
+    methodology_text = f"""## Methodology⚙️
+    This section describes the datasets, toxic term list, and filtering procedure used throughout the experiment.
 
-#         corpus_dir = os.path.join(data_path, corpus_name)
+    ### Source Data
 
-#         if not os.path.isdir(corpus_dir):
-#             continue
+    The source data (**`📁data`**)[{data['relative_data_directory']}]consist on **{data['number_of_corpora']} corpora** sourced from the Existing Corpora Repository, which compiles available Guarani corpora into files of a standardised form. For more information on the contents, read their report.
 
-#         corpus_file_path = os.path.join(
-#             corpus_dir,
-#             f"{corpus_name}.jsonl"
-#         )
+    ### Toxic Term List
 
-#         corpus_report_path = os.path.join(
-#             corpus_dir,
-#             f"{corpus_name}_report.json"
-#         )
+    The words and phrases used for filtering, hereafter referred to as **toxic terms**, were manually copied from the SPL's list of *Palabras Vulgares u Ofensivas en Guarani*, which includes both single-word and multi-word expressions. 
 
-#         if not os.path.isfile(corpus_file_path):
-#             continue
+    ### Filtering Criterion
 
-#         print(f"[INFO] Processing corpus: {corpus_name}")
+    A document is considered an **affected document** if it contains **at least one term** from the list. 
 
-#         results = process_file(corpus_file_path, bad_words)
+    Toxic terms are identified using regular expression matching with word boundaries to reduce false positives from partial matches. Matching is performed on lowercased text using the following pattern:
 
-#         create_report(
-#             data=results,
-#             output_data_dir=output_data_dir,
-#             corpus_name=corpus_name,
-#             corpus_report_path=corpus_report_path,
-#         )
+    ```python
+    def word_counts(text: str, words: list):
+    text_lower = text.lower()
+    counts = Counter()
 
-#         processed += 1
+    for phrase in words:
+        phrase = phrase.lower()
+        # Match whole words, even for multi-word phrases
+        pattern = rf"\\b{re.escape(phrase)}\\b"
+        matches = re.findall(pattern, text_lower)
+        if matches:
+            counts[phrase] = len(matches)
 
+    return dict(counts)
+    ```
+    """
 
-
+    #Corpus-level Analysis
+    corpus_level_intro = "This section analyses the results at the corpus level"

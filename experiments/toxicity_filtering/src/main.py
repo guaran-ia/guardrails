@@ -1,33 +1,21 @@
 import os
-
 from utils import load_bad_words
 from filtering import process_existing_corpora
 
 def main():
-    # Resolve project directories
     current_file = os.path.abspath(__file__)
     src_dir = os.path.dirname(current_file)
-    main_directory = os.path.dirname(src_dir)
-    # -> experiments/toxicity_filtering
+    main_directory = os.path.dirname(src_dir) # -> experiments/toxicity_filtering
 
-    # Path to bad words list
-    bad_words_path = os.path.join(
-        main_directory,
-        "data",
-        "bad_words.txt",  # adjust if needed
-    )
+    input_data_directory = os.path.join(main_directory, 'data', 'existing_corpora', 'data', 'processed')
+    output_directory = os.path.join(main_directory, 'data', 'processing_results')
+    toxic_terms_path = os.path.join(main_directory, 'data', 'bad_words.txt')
 
-    # Load bad words
-    bad_words = load_bad_words(bad_words_path)
+    toxic_terms = load_bad_words(toxic_terms_path)
 
-    print(f"[INFO] Loaded {len(bad_words)} bad words")
+    print(f"[INFO] Loaded {len(toxic_terms)} bad words")
 
-    # Trial run: process only 3 corpora
-    process_existing_corpora(
-        main_directory=main_directory,
-        bad_words=bad_words,
-        #max_corpora=3,
-    )
+    process_existing_corpora(input_data_directory, output_directory, toxic_terms)
 
 
 if __name__ == "__main__":

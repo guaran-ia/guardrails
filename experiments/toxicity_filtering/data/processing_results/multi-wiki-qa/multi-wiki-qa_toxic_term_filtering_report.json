@@ -1,0 +1,40 @@
+{
+  "corpus_name": "multi-wiki-qa",
+  "total_documents": 4850,
+  "total_documents_by_source": {
+    "unknown": 4850
+  },
+  "total_documents_by_domain": {
+    "gn.wikipedia.org": 4850
+  },
+  "affected_documents": 125,
+  "ratio_affected_documents": 0.02577319587628866,
+  "affected_documents_by_source": {
+    "unknown": 125
+  },
+  "affected_documents_by_domain": {
+    "gn.wikipedia.org": 125
+  },
+  "toxic_terms": 187,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 187
+  },
+  "toxic_terms_by_domain": {
+    "gn.wikipedia.org": 187
+  },
+  "toxic_term_counts": {
+    "vare’a": 20,
+    "guyra tavy": 3,
+    "mondaha": 13,
+    "tavy": 56,
+    "výro": 13,
+    "jaguakuña": 18,
+    "pire pererĩ": 10,
+    "mykurẽ": 9,
+    "pokarẽ": 17,
+    "che revi": 9,
+    "tembo": 16,
+    "ñe’ẽrei": 3
+  }
+}

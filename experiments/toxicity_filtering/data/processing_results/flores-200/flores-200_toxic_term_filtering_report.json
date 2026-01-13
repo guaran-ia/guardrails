@@ -1,0 +1,33 @@
+{
+  "corpus_name": "flores-200",
+  "total_documents": 8024,
+  "total_documents_by_source": {
+    "wikinews": 2744,
+    "wikibooks": 2608,
+    "wikivoyage": 2672
+  },
+  "total_documents_by_domain": {
+    "en.wikinews.org": 2744,
+    "en.wikibooks.org": 2608,
+    "en.wikivoyage.org": 2672
+  },
+  "affected_documents": 4,
+  "ratio_affected_documents": 0.0004985044865403788,
+  "affected_documents_by_source": {
+    "wikinews": 4
+  },
+  "affected_documents_by_domain": {
+    "en.wikinews.org": 4
+  },
+  "toxic_terms": 4,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "wikinews": 4
+  },
+  "toxic_terms_by_domain": {
+    "en.wikinews.org": 4
+  },
+  "toxic_term_counts": {
+    "tavy": 4
+  }
+}

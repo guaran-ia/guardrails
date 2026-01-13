@@ -1,0 +1,40 @@
+{
+  "corpus_name": "tatoeba",
+  "total_documents": 3367,
+  "total_documents_by_source": {
+    "unknown": 3367
+  },
+  "total_documents_by_domain": {
+    "unknown": 3367
+  },
+  "affected_documents": 21,
+  "ratio_affected_documents": 0.006237006237006237,
+  "affected_documents_by_source": {
+    "unknown": 21
+  },
+  "affected_documents_by_domain": {
+    "unknown": 21
+  },
+  "toxic_terms": 24,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 24
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 24
+  },
+  "toxic_term_counts": {
+    "tembo": 3,
+    "che revi": 1,
+    "che rembo": 3,
+    "tavy": 5,
+    "výro": 2,
+    "añamemby": 1,
+    "mbóre": 1,
+    "japiro": 2,
+    "ejapiro": 1,
+    "ejapiro túnare": 1,
+    "tembo la eréa": 1,
+    "mondaha": 3
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "corpus_name": "joemo",
+  "total_documents": 1571,
+  "total_documents_by_source": {
+    "unknown": 1571
+  },
+  "total_documents_by_domain": {
+    "unknown": 1571
+  },
+  "affected_documents": 135,
+  "ratio_affected_documents": 0.0859325270528326,
+  "affected_documents_by_source": {
+    "unknown": 135
+  },
+  "affected_documents_by_domain": {
+    "unknown": 135
+  },
+  "toxic_terms": 148,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 148
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 148
+  },
+  "toxic_term_counts": {
+    "ejapiro": 6,
+    "tembo": 50,
+    "tavy": 54,
+    "akã trapo": 3,
+    "juru palangana": 3,
+    "nderevi": 1,
+    "japiro": 4,
+    "che rembo": 4,
+    "mondaha": 5,
+    "tavyrón": 1,
+    "añamemby": 12,
+    "pysã tronco": 1,
+    "nde akã tembo": 2,
+    "voli kuña": 1,
+    "jurutavy": 1
+  }
+}

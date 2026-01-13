@@ -1,0 +1,48 @@
+{
+  "corpus_name": "josa",
+  "total_documents": 3491,
+  "total_documents_by_source": {
+    "unknown": 3491
+  },
+  "total_documents_by_domain": {
+    "unknown": 3491
+  },
+  "affected_documents": 57,
+  "ratio_affected_documents": 0.01632769979948439,
+  "affected_documents_by_source": {
+    "unknown": 57
+  },
+  "affected_documents_by_domain": {
+    "unknown": 57
+  },
+  "toxic_terms": 61,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 61
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 61
+  },
+  "toxic_term_counts": {
+    "tembo": 10,
+    "tavyrai": 3,
+    "tavy": 20,
+    "vaka cháko": 1,
+    "nderasóre": 5,
+    "añamemby": 5,
+    "mondaha": 1,
+    "mykurẽ": 1,
+    "japiro": 1,
+    "takuchi": 1,
+    "vaícha": 1,
+    "añarako": 3,
+    "añarakópeguare": 1,
+    "ejapiro": 2,
+    "che rembo": 1,
+    "eike nde revikuápe": 1,
+    "teviro": 1,
+    "ejapiro túnare": 1,
+    "añaraitypeguare": 1,
+    "molde vai": 1
+  }
+}

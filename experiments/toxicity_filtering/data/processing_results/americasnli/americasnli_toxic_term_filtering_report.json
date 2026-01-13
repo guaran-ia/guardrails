@@ -1,0 +1,29 @@
+{
+  "corpus_name": "americasnli",
+  "total_documents": 1990,
+  "total_documents_by_source": {
+    "unknown": 1990
+  },
+  "total_documents_by_domain": {
+    "unknown": 1990
+  },
+  "affected_documents": 6,
+  "ratio_affected_documents": 0.003015075376884422,
+  "affected_documents_by_source": {
+    "unknown": 6
+  },
+  "affected_documents_by_domain": {
+    "unknown": 6
+  },
+  "toxic_terms": 6,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 6
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 6
+  },
+  "toxic_term_counts": {
+    "mondaha": 6
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "corpus_name": "opus-all-es",
+  "total_documents": 3907,
+  "total_documents_by_source": {
+    "Tatoeba_v2023-04-12": 3278,
+    "Ubuntu_v14.10": 44,
+    "GNOME_v1": 96,
+    "QED_v2.0a": 2,
+    "wikimedia_v20230407": 487
+  },
+  "total_documents_by_domain": {
+    "unknown": 3907
+  },
+  "affected_documents": 16,
+  "ratio_affected_documents": 0.004095213718965958,
+  "affected_documents_by_source": {
+    "Tatoeba_v2023-04-12": 16
+  },
+  "affected_documents_by_domain": {
+    "unknown": 16
+  },
+  "toxic_terms": 18,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "Tatoeba_v2023-04-12": 18
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 18
+  },
+  "toxic_term_counts": {
+    "tavy": 5,
+    "che rembo": 3,
+    "japiro": 1,
+    "ejapiro": 1,
+    "ejapiro túnare": 1,
+    "mondaha": 3,
+    "tembo": 1,
+    "che revi": 1,
+    "výro": 1,
+    "mbóre": 1
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "corpus_name": "opus-all-en",
+  "total_documents": 417480,
+  "total_documents_by_source": {
+    "Tatoeba_v2023-04-12": 3278,
+    "Ubuntu_v14.10": 44,
+    "GNOME_v1": 96,
+    "QED_v2.0a": 2,
+    "NLLB_v1": 413573,
+    "wikimedia_v20230407": 487
+  },
+  "total_documents_by_domain": {
+    "unknown": 417480
+  },
+  "affected_documents": 550,
+  "ratio_affected_documents": 0.0013174283798026254,
+  "affected_documents_by_source": {
+    "Tatoeba_v2023-04-12": 16,
+    "NLLB_v1": 534
+  },
+  "affected_documents_by_domain": {
+    "unknown": 550
+  },
+  "toxic_terms": 570,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "Tatoeba_v2023-04-12": 18,
+    "NLLB_v1": 552
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 570
+  },
+  "toxic_term_counts": {
+    "tavy": 123,
+    "che rembo": 6,
+    "japiro": 3,
+    "ejapiro": 4,
+    "ejapiro túnare": 2,
+    "mondaha": 160,
+    "tembo": 37,
+    "che revi": 6,
+    "výro": 83,
+    "mbóre": 2,
+    "pokarẽ": 21,
+    "tavyrón": 3,
+    "añamemby": 21,
+    "pituva": 19,
+    "akã pekõi": 2,
+    "mykurẽ": 21,
+    "pire pererĩ": 3,
+    "vaícha": 8,
+    "eike nderevikuápe": 1,
+    "añarakópeguare": 4,
+    "popinda": 8,
+    "tilinga": 1,
+    "tavyrai": 7,
+    "chalái": 3,
+    "añarapypikuarapeguare": 1,
+    "kelembu": 3,
+    "pychãi": 9,
+    "jaguakuña": 3,
+    "jurutavy": 1,
+    "anguja tupao": 1,
+    "tóro rembo": 1,
+    "molde vai": 1,
+    "añarako": 2
+  }
+}

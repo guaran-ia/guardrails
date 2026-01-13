@@ -1,0 +1,44 @@
+{
+  "corpus_name": "americasnlp2024",
+  "total_documents": 109719,
+  "total_documents_by_source": {
+    "unknown": 109719
+  },
+  "total_documents_by_domain": {
+    "unknown": 109719
+  },
+  "affected_documents": 96,
+  "ratio_affected_documents": 0.0008749624039592049,
+  "affected_documents_by_source": {
+    "unknown": 96
+  },
+  "affected_documents_by_domain": {
+    "unknown": 96
+  },
+  "toxic_terms": 103,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 103
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 103
+  },
+  "toxic_term_counts": {
+    "mbóre": 2,
+    "výro": 6,
+    "tavy": 17,
+    "tembo": 12,
+    "pire pererĩ": 3,
+    "mondaha": 18,
+    "añamemby": 2,
+    "che rembo": 1,
+    "nderasóre": 2,
+    "jaguakuña": 7,
+    "kelembu": 4,
+    "pychãi": 2,
+    "che revi": 1,
+    "mykurẽ": 18,
+    "pokarẽ": 6,
+    "guyra tavy": 2
+  }
+}

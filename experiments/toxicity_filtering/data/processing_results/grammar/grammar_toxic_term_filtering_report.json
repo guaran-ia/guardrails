@@ -1,0 +1,41 @@
+{
+  "corpus_name": "grammar",
+  "total_documents": 277842,
+  "total_documents_by_source": {
+    "unknown": 277842
+  },
+  "total_documents_by_domain": {
+    "unknown": 277842
+  },
+  "affected_documents": 786,
+  "ratio_affected_documents": 0.0028289459476968926,
+  "affected_documents_by_source": {
+    "unknown": 786
+  },
+  "affected_documents_by_domain": {
+    "unknown": 786
+  },
+  "toxic_terms": 789,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 789
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 789
+  },
+  "toxic_term_counts": {
+    "tembo": 7,
+    "výro": 188,
+    "pokarẽ": 102,
+    "takuchi": 18,
+    "pituva": 133,
+    "teviro": 14,
+    "mykurẽ": 25,
+    "mbóre": 53,
+    "tavy": 81,
+    "popinda": 39,
+    "tavyrai": 100,
+    "chalái": 20,
+    "kelembu": 9
+  }
+}

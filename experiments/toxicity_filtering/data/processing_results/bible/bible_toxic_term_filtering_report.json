@@ -1,0 +1,35 @@
+{
+  "corpus_name": "bible",
+  "total_documents": 22818,
+  "total_documents_by_source": {
+    "unknown": 22818
+  },
+  "total_documents_by_domain": {
+    "unknown": 22818
+  },
+  "affected_documents": 133,
+  "ratio_affected_documents": 0.005828731703041459,
+  "affected_documents_by_source": {
+    "unknown": 133
+  },
+  "affected_documents_by_domain": {
+    "unknown": 133
+  },
+  "toxic_terms": 136,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 136
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 136
+  },
+  "toxic_term_counts": {
+    "výro": 41,
+    "mondaha": 36,
+    "tavy": 46,
+    "pokarẽ": 3,
+    "tavyrai": 3,
+    "vaícha": 6,
+    "mykurẽ": 1
+  }
+}

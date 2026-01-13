@@ -1,0 +1,39 @@
+{
+  "corpus_name": "gua_spa",
+  "total_documents": 1500,
+  "total_documents_by_source": {
+    "unknown": 1500
+  },
+  "total_documents_by_domain": {
+    "unknown": 1500
+  },
+  "affected_documents": 38,
+  "ratio_affected_documents": 0.025333333333333333,
+  "affected_documents_by_source": {
+    "unknown": 38
+  },
+  "affected_documents_by_domain": {
+    "unknown": 38
+  },
+  "toxic_terms": 40,
+  "toxic_terms_counts": null,
+  "toxic_terms_by_source": {
+    "unknown": 40
+  },
+  "toxic_terms_by_domain": {
+    "unknown": 40
+  },
+  "toxic_term_counts": {
+    "tavy": 18,
+    "nderevi": 1,
+    "tembo": 10,
+    "añamemby": 1,
+    "japiro": 1,
+    "che rembo": 1,
+    "teviro": 1,
+    "mondaha": 2,
+    "tatune": 1,
+    "ejapiro": 3,
+    "akã trapo": 1
+  }
+}
