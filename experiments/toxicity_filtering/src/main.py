@@ -15,11 +15,11 @@ def main():
     toxic_terms_path = os.path.join(toxicity_filtering_directory, 'data', 'toxic_terms.txt')
     report_template_path = os.path.join(toxicity_filtering_directory, 'data', 'report_template.md')
 
-    # toxic_terms = load_bad_words(toxic_terms_path)
+    toxic_terms = load_bad_words(toxic_terms_path)
 
-    # print(f"[INFO] Loaded {len(toxic_terms)} toxic terms")
+    print(f"[INFO] Loaded {len(toxic_terms)} toxic terms")
 
-    # process_existing_corpora(corpora_data_directory, output_directory, toxic_terms)
+    process_existing_corpora(corpora_data_directory, output_directory, toxic_terms)
 
     processing_paths = {
         'relative_data_directory': os.path.relpath(corpora_data_directory, toxicity_filtering_directory),
