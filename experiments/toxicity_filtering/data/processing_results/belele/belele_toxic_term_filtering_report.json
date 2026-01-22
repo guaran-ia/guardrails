@@ -16,14 +16,13 @@
     "unknown": 2
   },
   "toxic_terms": 2,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Tavy": 2
+  },
   "toxic_terms_by_source": {
     "unknown": 2
   },
   "toxic_terms_by_domain": {
     "unknown": 2
-  },
-  "toxic_term_counts": {
-    "tavy": 2
   }
 }

@@ -17,15 +17,14 @@
     "unknown": 12
   },
   "toxic_terms": 33,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Tavy": 22,
+    "Mondaha": 11
+  },
   "toxic_terms_by_source": {
     "general_gn": 33
   },
   "toxic_terms_by_domain": {
     "unknown": 33
-  },
-  "toxic_term_counts": {
-    "tavy": 22,
-    "mondaha": 11
   }
 }

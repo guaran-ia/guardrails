@@ -16,24 +16,23 @@
     "unknown": 38
   },
   "toxic_terms": 40,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Tavy": 18,
+    "Nderevi": 1,
+    "Tembo": 10,
+    "Añamemby": 1,
+    "Japiro": 1,
+    "Che rembo": 1,
+    "Teviro": 1,
+    "Mondaha": 2,
+    "Tatune": 1,
+    "Ejapiro": 3,
+    "Akã trapo": 1
+  },
   "toxic_terms_by_source": {
     "unknown": 40
   },
   "toxic_terms_by_domain": {
     "unknown": 40
-  },
-  "toxic_term_counts": {
-    "tavy": 18,
-    "nderevi": 1,
-    "tembo": 10,
-    "añamemby": 1,
-    "japiro": 1,
-    "che rembo": 1,
-    "teviro": 1,
-    "mondaha": 2,
-    "tatune": 1,
-    "ejapiro": 3,
-    "akã trapo": 1
   }
 }

@@ -16,14 +16,13 @@
     "unknown": 1
   },
   "toxic_terms": 1,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Pokarẽ": 1
+  },
   "toxic_terms_by_source": {
     "unknown": 1
   },
   "toxic_terms_by_domain": {
     "unknown": 1
-  },
-  "toxic_term_counts": {
-    "pokarẽ": 1
   }
 }

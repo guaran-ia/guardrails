@@ -16,20 +16,19 @@
     "unknown": 32
   },
   "toxic_terms": 32,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Pychãi": 16,
+    "Mondaha": 10,
+    "Añamemby": 2,
+    "Molde vai": 1,
+    "Mbóre": 1,
+    "Tavyrón": 1,
+    "Pokarẽ": 1
+  },
   "toxic_terms_by_source": {
     "unknown": 32
   },
   "toxic_terms_by_domain": {
     "unknown": 32
-  },
-  "toxic_term_counts": {
-    "pychãi": 16,
-    "mondaha": 10,
-    "añamemby": 2,
-    "molde vai": 1,
-    "mbóre": 1,
-    "tavyrón": 1,
-    "pokarẽ": 1
   }
 }

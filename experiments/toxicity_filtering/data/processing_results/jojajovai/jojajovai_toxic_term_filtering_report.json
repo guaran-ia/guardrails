@@ -28,7 +28,18 @@
     "unknown": 32
   },
   "toxic_terms": 32,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Mondaha": 12,
+    "Tavy": 6,
+    "Kelembu": 3,
+    "Vare’a": 3,
+    "Jaguakuña": 2,
+    "Añamemby": 1,
+    "Mbóre": 1,
+    "Výro": 2,
+    "Nderasóre": 1,
+    "Tembo": 1
+  },
   "toxic_terms_by_source": {
     "abc": 17,
     "blogs": 4,
@@ -39,17 +50,5 @@
   },
   "toxic_terms_by_domain": {
     "unknown": 32
-  },
-  "toxic_term_counts": {
-    "mondaha": 12,
-    "tavy": 6,
-    "kelembu": 3,
-    "vare’a": 3,
-    "jaguakuña": 2,
-    "añamemby": 1,
-    "mbóre": 1,
-    "výro": 2,
-    "nderasóre": 1,
-    "tembo": 1
   }
 }

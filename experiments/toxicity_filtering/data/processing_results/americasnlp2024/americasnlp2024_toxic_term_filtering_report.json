@@ -16,29 +16,28 @@
     "unknown": 96
   },
   "toxic_terms": 103,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Mbóre": 2,
+    "Výro": 6,
+    "Tavy": 17,
+    "Tembo": 12,
+    "Pire pererĩ": 3,
+    "Mondaha": 18,
+    "Añamemby": 2,
+    "Che rembo": 1,
+    "Nderasóre": 2,
+    "Jaguakuña": 7,
+    "Kelembu": 4,
+    "Pychãi": 2,
+    "Che revi": 1,
+    "Mykurẽ": 18,
+    "Pokarẽ": 6,
+    "Guyra tavy": 2
+  },
   "toxic_terms_by_source": {
     "unknown": 103
   },
   "toxic_terms_by_domain": {
     "unknown": 103
-  },
-  "toxic_term_counts": {
-    "mbóre": 2,
-    "výro": 6,
-    "tavy": 17,
-    "tembo": 12,
-    "pire pererĩ": 3,
-    "mondaha": 18,
-    "añamemby": 2,
-    "che rembo": 1,
-    "nderasóre": 2,
-    "jaguakuña": 7,
-    "kelembu": 4,
-    "pychãi": 2,
-    "che revi": 1,
-    "mykurẽ": 18,
-    "pokarẽ": 6,
-    "guyra tavy": 2
   }
 }

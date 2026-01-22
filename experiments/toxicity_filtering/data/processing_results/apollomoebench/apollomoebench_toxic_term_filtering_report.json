@@ -12,8 +12,7 @@
   "affected_documents_by_source": {},
   "affected_documents_by_domain": {},
   "toxic_terms": 0,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {},
   "toxic_terms_by_source": {},
-  "toxic_terms_by_domain": {},
-  "toxic_term_counts": {}
+  "toxic_terms_by_domain": {}
 }

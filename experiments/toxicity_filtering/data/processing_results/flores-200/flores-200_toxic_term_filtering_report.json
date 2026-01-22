@@ -20,14 +20,13 @@
     "en.wikinews.org": 4
   },
   "toxic_terms": 4,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Tavy": 4
+  },
   "toxic_terms_by_source": {
     "wikinews": 4
   },
   "toxic_terms_by_domain": {
     "en.wikinews.org": 4
-  },
-  "toxic_term_counts": {
-    "tavy": 4
   }
 }

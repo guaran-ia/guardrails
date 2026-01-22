@@ -20,23 +20,22 @@
     "unknown": 16
   },
   "toxic_terms": 18,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Tavy": 5,
+    "Che rembo": 3,
+    "Japiro": 1,
+    "Ejapiro": 1,
+    "Ejapiro túnare": 1,
+    "Mondaha": 3,
+    "Tembo": 1,
+    "Che revi": 1,
+    "Výro": 1,
+    "Mbóre": 1
+  },
   "toxic_terms_by_source": {
     "Tatoeba_v2023-04-12": 18
   },
   "toxic_terms_by_domain": {
     "unknown": 18
-  },
-  "toxic_term_counts": {
-    "tavy": 5,
-    "che rembo": 3,
-    "japiro": 1,
-    "ejapiro": 1,
-    "ejapiro túnare": 1,
-    "mondaha": 3,
-    "tembo": 1,
-    "che revi": 1,
-    "výro": 1,
-    "mbóre": 1
   }
 }

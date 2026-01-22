@@ -16,14 +16,13 @@
     "unknown": 6
   },
   "toxic_terms": 6,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Mondaha": 6
+  },
   "toxic_terms_by_source": {
     "unknown": 6
   },
   "toxic_terms_by_domain": {
     "unknown": 6
-  },
-  "toxic_term_counts": {
-    "mondaha": 6
   }
 }

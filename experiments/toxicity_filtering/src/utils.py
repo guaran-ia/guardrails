@@ -73,14 +73,13 @@ def load_bad_words(file_path:str):
 def make_markdown_table(
     rows: list[dict],
     *,
-    #columns: list[str],
     rename: dict[str, str] | None = None,
-    order_by: str | None = None,
+    order_by: str | list[str] | list[tuple[str, bool]] | None = None,
     descending: bool = True,
-    highlights: dict[str, str] | None = None,   # "max" | "min"
-    totals: dict[str, str] | None = None,       # "sum" | "mean"
+    highlights: dict[str, str] | None = None,
+    totals: dict[str, str] | None = None,
     formatters: dict[str, callable] | None = None,
-    align: dict[str, str] | None = None,        # left | right | center
+    align: dict[str, str] | None = None,
 ) -> str:
 
     rename = rename or {}
@@ -104,7 +103,20 @@ def make_markdown_table(
         align = {col: align for col in columns}
 
     if order_by:
-        processed.sort(key=lambda r: r[order_by], reverse=descending)
+        # Normalize order_by into a list of (column, descending) tuples
+        if isinstance(order_by, str):
+            keys = [(order_by, descending)]
+        elif isinstance(order_by, list):
+            if isinstance(order_by[0], tuple):
+                keys = order_by
+            else:
+                keys = [(col, descending) for col in order_by]
+        else:
+            raise TypeError("order_by must be str or list")
+
+        # Stable sort: apply from lowest priority to highest
+        for col, desc in reversed(keys):
+            processed.sort(key=lambda r: r[col], reverse=desc)
 
     highlight_values = {}
     for col, mode in highlights.items():

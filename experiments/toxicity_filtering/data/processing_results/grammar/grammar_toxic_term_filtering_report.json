@@ -16,26 +16,25 @@
     "unknown": 786
   },
   "toxic_terms": 789,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Tembo": 7,
+    "Výro": 188,
+    "Pokarẽ": 102,
+    "Takuchi": 18,
+    "Pituva": 133,
+    "Teviro": 14,
+    "Mykurẽ": 25,
+    "Mbóre": 53,
+    "Tavy": 81,
+    "Popinda": 39,
+    "Tavyrai": 100,
+    "Chalái": 20,
+    "Kelembu": 9
+  },
   "toxic_terms_by_source": {
     "unknown": 789
   },
   "toxic_terms_by_domain": {
     "unknown": 789
-  },
-  "toxic_term_counts": {
-    "tembo": 7,
-    "výro": 188,
-    "pokarẽ": 102,
-    "takuchi": 18,
-    "pituva": 133,
-    "teviro": 14,
-    "mykurẽ": 25,
-    "mbóre": 53,
-    "tavy": 81,
-    "popinda": 39,
-    "tavyrai": 100,
-    "chalái": 20,
-    "kelembu": 9
   }
 }

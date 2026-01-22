@@ -16,29 +16,28 @@
     "unknown": 143
   },
   "toxic_terms": 157,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Tavy": 64,
+    "Tembo": 50,
+    "Nderevi": 2,
+    "Japiro": 4,
+    "Mondaha": 4,
+    "Juru palangana": 3,
+    "Añamemby": 12,
+    "Akã trapo": 3,
+    "Ejapiro": 5,
+    "Jurutavy": 1,
+    "Pokarẽ": 1,
+    "Nde akã tembo": 2,
+    "Tavyrón": 1,
+    "Pysã tronco": 1,
+    "Voli kuña": 1,
+    "Che rembo": 3
+  },
   "toxic_terms_by_source": {
     "unknown": 157
   },
   "toxic_terms_by_domain": {
     "unknown": 157
-  },
-  "toxic_term_counts": {
-    "tavy": 64,
-    "tembo": 50,
-    "nderevi": 2,
-    "japiro": 4,
-    "mondaha": 4,
-    "juru palangana": 3,
-    "añamemby": 12,
-    "akã trapo": 3,
-    "ejapiro": 5,
-    "jurutavy": 1,
-    "pokarẽ": 1,
-    "nde akã tembo": 2,
-    "tavyrón": 1,
-    "pysã tronco": 1,
-    "voli kuña": 1,
-    "che rembo": 3
   }
 }

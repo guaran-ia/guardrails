@@ -16,33 +16,32 @@
     "unknown": 57
   },
   "toxic_terms": 61,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Tembo": 10,
+    "Tavyrai": 3,
+    "Tavy": 20,
+    "Vaka Cháko": 1,
+    "Nderasóre": 5,
+    "Añamemby": 5,
+    "Mondaha": 1,
+    "Mykurẽ": 1,
+    "Japiro": 1,
+    "Takuchi": 1,
+    "Vaícha": 1,
+    "Añarako": 3,
+    "Añarakópeguare": 1,
+    "Ejapiro": 2,
+    "Che rembo": 1,
+    "Eike nde revikuápe": 1,
+    "Teviro": 1,
+    "Ejapiro túnare": 1,
+    "Añaraitypeguare": 1,
+    "Molde vai": 1
+  },
   "toxic_terms_by_source": {
     "unknown": 61
   },
   "toxic_terms_by_domain": {
     "unknown": 61
-  },
-  "toxic_term_counts": {
-    "tembo": 10,
-    "tavyrai": 3,
-    "tavy": 20,
-    "vaka cháko": 1,
-    "nderasóre": 5,
-    "añamemby": 5,
-    "mondaha": 1,
-    "mykurẽ": 1,
-    "japiro": 1,
-    "takuchi": 1,
-    "vaícha": 1,
-    "añarako": 3,
-    "añarakópeguare": 1,
-    "ejapiro": 2,
-    "che rembo": 1,
-    "eike nde revikuápe": 1,
-    "teviro": 1,
-    "ejapiro túnare": 1,
-    "añaraitypeguare": 1,
-    "molde vai": 1
   }
 }

@@ -16,25 +16,24 @@
     "gn.wikipedia.org": 125
   },
   "toxic_terms": 187,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Vare’a": 20,
+    "Guyra tavy": 3,
+    "Mondaha": 13,
+    "Tavy": 56,
+    "Výro": 13,
+    "Jaguakuña": 18,
+    "Pire pererĩ": 10,
+    "Mykurẽ": 9,
+    "Pokarẽ": 17,
+    "Che revi": 9,
+    "Tembo": 16,
+    "Ñe’ẽrei": 3
+  },
   "toxic_terms_by_source": {
     "unknown": 187
   },
   "toxic_terms_by_domain": {
     "gn.wikipedia.org": 187
-  },
-  "toxic_term_counts": {
-    "vare’a": 20,
-    "guyra tavy": 3,
-    "mondaha": 13,
-    "tavy": 56,
-    "výro": 13,
-    "jaguakuña": 18,
-    "pire pererĩ": 10,
-    "mykurẽ": 9,
-    "pokarẽ": 17,
-    "che revi": 9,
-    "tembo": 16,
-    "ñe’ẽrei": 3
   }
 }

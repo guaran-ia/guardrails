@@ -85,7 +85,11 @@
     "www.portalguarani.com": 3
   },
   "toxic_terms": 18,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Tavy": 15,
+    "Mondaha": 1,
+    "Vare’a": 2
+  },
   "toxic_terms_by_source": {
     "unknown": 18
   },
@@ -95,10 +99,5 @@
     "www.mozilla.org": 1,
     "independiente.com.py": 1,
     "www.portalguarani.com": 12
-  },
-  "toxic_term_counts": {
-    "tavy": 15,
-    "mondaha": 1,
-    "vare’a": 2
   }
 }

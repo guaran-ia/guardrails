@@ -16,19 +16,18 @@
     "unknown": 28
   },
   "toxic_terms": 28,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Mondaha": 11,
+    "Tavy": 6,
+    "Nderasóre": 2,
+    "Jaguakuña": 4,
+    "Kelembu": 4,
+    "Añamemby": 1
+  },
   "toxic_terms_by_source": {
     "unknown": 28
   },
   "toxic_terms_by_domain": {
     "unknown": 28
-  },
-  "toxic_term_counts": {
-    "mondaha": 11,
-    "tavy": 6,
-    "nderasóre": 2,
-    "jaguakuña": 4,
-    "kelembu": 4,
-    "añamemby": 1
   }
 }

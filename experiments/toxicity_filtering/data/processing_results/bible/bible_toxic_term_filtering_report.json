@@ -16,20 +16,19 @@
     "unknown": 133
   },
   "toxic_terms": 136,
-  "toxic_terms_counts": null,
+  "toxic_term_counts": {
+    "Výro": 41,
+    "Mondaha": 36,
+    "Tavy": 46,
+    "Pokarẽ": 3,
+    "Tavyrai": 3,
+    "Vaícha": 6,
+    "Mykurẽ": 1
+  },
   "toxic_terms_by_source": {
     "unknown": 136
   },
   "toxic_terms_by_domain": {
     "unknown": 136
-  },
-  "toxic_term_counts": {
-    "výro": 41,
-    "mondaha": 36,
-    "tavy": 46,
-    "pokarẽ": 3,
-    "tavyrai": 3,
-    "vaícha": 6,
-    "mykurẽ": 1
   }
 }
