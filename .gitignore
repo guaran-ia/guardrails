@@ -3,3 +3,4 @@ __pycache__/
 experiments/toxicity_filtering/src/__pycache__
 guardrails_env/
 experiments/data/
+.env
