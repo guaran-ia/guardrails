@@ -20,3 +20,4 @@ class BaseTransformerModel(ABC):
             score (float): confidence
         """
         pass
+
