@@ -4,3 +4,7 @@ experiments/toxicity_filtering/src/__pycache__
 guardrails_env/
 experiments/data/
 .env
+offensive_content_filtering/outputs
+offensive_content_filtering/data
+offensive_content_filtering/ml_filtering
+offensive_content_filtering/toxicity_filtering
